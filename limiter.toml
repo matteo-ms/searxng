@@ -1,0 +1,58 @@
+# SearxNG Limiter Configuration
+# Disabilita tutte le protezioni bot detection per uso API
+
+[botdetection]
+# Disable bot detection methods
+enabled = false
+
+# IP prefixes for network detection (not used when disabled)
+ipv4_prefix = 32
+ipv6_prefix = 128
+
+[botdetection.ip_limit]
+# Completely disable IP-based rate limiting
+enabled = false
+link_token = false
+filter_link_local = false
+
+# Window settings (ignored when disabled)
+API_WINDOW = 3600
+API_MAX = 10
+USER_WINDOW = 86400
+USER_MAX = 100
+BURST_WINDOW = 300
+BURST_MAX = 15
+SUSPICIOUS_IP_WINDOW = 86400
+SUSPICIOUS_IP_MAX = 5
+SUSPICIOUS_IP_PAUSE = 604800
+
+[botdetection.ip_lists]
+# Disable IP blocking/pass lists
+block_ip = []
+pass_ip = []
+pass_searxng_org = false
+
+[botdetection.probe_headers]
+# Disable all header-based bot detection
+enabled = false
+
+[botdetection.http_user_agent]
+# Disable user-agent based bot detection
+enabled = false
+
+[botdetection.http_accept]
+enabled = false
+
+[botdetection.http_accept_encoding]
+enabled = false
+
+[botdetection.http_accept_language]
+enabled = false
+
+[botdetection.http_sec_fetch]
+enabled = false
+
+[botdetection.trusted_proxies]
+# Disable trusted proxy checks
+enabled = false
+trusted_proxies = []
